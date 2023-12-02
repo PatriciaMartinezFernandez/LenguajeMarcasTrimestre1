@@ -19,18 +19,47 @@
         <fieldset>
             <legend>Otros datos</legend>
             Fecha de nacimiento: <input type="date"> <br>
-            Equipo de fútbol: <input type="select"> <br>
+            Equipo de fútbol: 
+            <select id="equipos">
+                <option value="Camas FC" selected>Camas FC</option>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Betis">Betis</option>
+                <option value="No me gusta">No me gusta el fútbol</option>
+            </select> <br>
             Este año aprobaré: <input type="radio"name="aprobar" value="Todo"> Todo <input type="radio"name="aprobar" values="Nada"> Nada <input type="radio"name="aprobar" values ="Lo que pueda"> Lo que pueda
             
             <hr>
 
             Tengo de mascota: <input type="checkbox"> Perro <input type="checkbox"> Gato <input type="checkbox"> Canario <br>
-            Mi asignatura favorita es: <input type="text"> <br> <!--Select-->
+            Mi asignatura favorita es: <input list="asignatura">
+            <datalist  id="asignatura">
+                <option value="Aplicaciones Web"></option>
+                <option value="Una que hay HTML"></option>
+                <option value="Esta, por supuesto"></option>
+            </datalist> <br>
             En mi tiempo libre:
-            Soy: <input type="radio"name="soy" value="Feo"> Feo <input type="radio"name="soy" values="Guapo"> Guapo
+            <select id="tiempo libre">
+                <optgroup label="Plan tranquilo">
+                    <option value="Juego a la Play" selected>Juego a la Play</option>
+                    <option value="Duermo">Duermo</option>
+                    <option value="Paseo al perro">Paseo al perro</option>
+                </optgroup>
+
+                <optgroup label="Plan movido">
+                    <option value="Veo dibujos de Hello Kety">Veo dibujos de Hello Kety</option>
+                    <option value="Salgo">Salgo</option>
+                </optgroup>
+
+                <optgroup label="Plan radical">
+                    <option value="Programo en HTML">Programo en HTML</option>
+                </optgroup>
+                
+            </select> <br>
+            Soy: <input type="radio"name="soy" value="Feo"> Feo <input disabled type="radio"name="soy" values="Guapo"> Guapo
         </fieldset>
 
-        <!--Faltan dos botones-->
+        <input type="submit" value="Valores por defecto"> 
+        <input type="submit" value="Enviar">
 
     </form>
 </body>
